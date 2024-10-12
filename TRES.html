@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NUMERO TRES</title>
+    <style>
+    html {
+        font-size: 15px;
+    }
+    body {
+        max-width: 900px;
+        margin: 2em auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+/*division de la pagina*/
+    .container {
+        display: grid;
+        grid-template-areas:"h      h       h       h"
+                            "nav   nav    nav    nav"
+                            "aside  section section aside2"
+                            "footer footer  footer  footer";
+        grid-gap: 10px;
+    }
+    header{
+      grid-area: h;
+      align-content: center;
+      color: yellow;
+      text-shadow: lightgrey 2px 5px;
+    }
+    nav{
+      grid-area: nav;
+      border: 2px solid red;
+      width: 70%;
+      text-align: center;
+    }
+    section{
+      grid-area: section;
+    }
+    section > .Parte3{
+      grid area: section;
+    }
+    aside{
+      grid-area: aside2;
+      border: 5px solid black;
+      background-color: lightgray;
+    }
+    footer{
+      grid-area: footer;
+      font-family: fantasy;
+      border: 1px solid purple;
+      border-radius: 20px;
+    }
+    /*CELULARES*/
+  @media screen and (max-width: 640px) {
+      .container{
+          grid-template-areas: "h"
+                               "nav"
+                               "section"
+                               "aside"
+                               "footer";
+          grid-gap: 5px;
+
+       }
+
+      p{
+          color:green;
+          font-size: .8rem;
+      }
+      h1{
+          font-size: 1.4rem;
+       }
+
+      h2{
+          font-size: 1rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+  }
+
+    /*TABLETS*/
+  @media screen and (min-width: 640px) and (max-width: 1280px) {
+
+      .container{
+          grid-template-areas: "h h h"
+                               "nav nav nav"
+                               "aside section section"
+                               "footer footer footer";
+          grid-gap: 20px;
+
+          /*grid-auto-rows: 100px;*/
+          /*grid-auto-rows: minmax(100px, auto);*/
+       }
+      #flotar{
+          float:none;
+          padding: 5px;
+          display: block;
+          width: auto;
+      }
+      h1{
+          font-size: 1.6rem;
+       }
+
+      h2{
+          font-size: 1.2rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+
+  }
+
+    /*LAP TOP*/
+  @media screen and (min-width: 1280px) and (max-width: 2700px){
+    .container{
+        grid-template-areas: "h h h h"
+                             "nav nav nav nav"
+                             "aside section section section"
+                             "footer footer footer footer";
+        grid-gap: 25px;
+
+        /*grid-auto-rows: 100px;*/
+        /*grid-auto-rows: minmax(100px, auto);*/
+     }
+    #flotar{
+        float:none;
+        padding: 7px;
+        display: block;
+        width: auto;
+    }
+    h1{
+        font-size: 1.8rem;
+     }
+
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+      font-size: 1.4rem
+    }
+
+  }
+  /*TV*/
+@media screen and (min-width: 2700px) {
+  .container{
+      grid-template-areas: "h h h h h"
+                           "nav nav nav nav nav"
+                           "aside section section section section"
+                           "footer footer footer footer footer";
+      grid-gap: 30px;
+
+      /*grid-auto-rows: 100px;*/
+      /*grid-auto-rows: minmax(100px, auto);*/
+   }
+ }
+    </style>
+  </head>
+  <body class="container">
+    <header>
+      <h1>NUMERO 3:BORDERLANDS 2</h1>
+    </header>
+    <nav>
+      <a href="home.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="uno.html">UNO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="dos.html">DOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="cuatro.html">CUATRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </nav>
+    <section>
+      <h3>INDICE</h3>
+      <a href="#Parte1">Introduccion</a> <br>
+      <a href="#Parte2">Historia</a> <br>
+      <a href="#Parte3">Foto del juego</a> <br>
+
+      <section id="Parte1">
+      <h2><a href="#indice">Introduccion</a></h2>
+      <p>
+        Borderlands 2 cuenta la historia de cuatro nuevos buscadores de la
+        Cámara en su lucha por liberar Pandora de las garras de Jack el Guapo,
+        el astuto, ingenioso, carismático y despreciable presidente de la
+        Corporación Hyperion.
+        A lo largo de su viaje se encontrarán con rostros familiares del primer
+        juego, entre los que destacan los cuatro buscadores de la cámara
+        originales (Roland, Lilith, Brick y Mordecai) y una gran cantidad de
+        personajes nuevos.
+      </p>
+      </section>
+      <section id="Parte2">
+      <h2><a href="#indice">Historia</a></h2>
+      <p>
+        El juego se sitúa 5 años después de su anterior título Borderlands.
+        Jack el guapo, antagonista principal, ha tomado la corporación Hyperion,
+        y se ha autoproclamado dictador de Pandora tras haber encontrado "La
+        Cámara". El nuevo grupo viaja en tren en busca de La Cámara. Pero
+        resulta ser una trampa de Jack pues quiere eliminar a todos los
+        buscadores de la cámara, y el vagón donde viajaban resulta ser un vagón
+        lleno de explosivos, pero los buscadores sobreviven a este atentado,
+        al ser rescatados por Clap-Trap, deciden continuar con su búsqueda de
+        la cámara, y asesinar a Jack y traer de vuelta la paz a Pandora.
+      </p>
+      </section>
+      <section id="Parte3">
+        <h2><a href="#indice">Foto del juego</a></h2>
+        <p>
+          <img src="Archivos/BL2.jpg"  width="400" height="300">
+        </p>
+        </section>
+    </section>
+    <footer>
+      <a href="home.html">REGRESAR</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width", initial-scale=1.0>
+    <title>PRINCIPAL</title>
+    <style>
+    html {
+        font-size: 15px;
+    }
+    body {
+        max-width: 900px;
+        margin: 2em auto;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, #4E2394, #DBC9F5 ); margin: 10px;/*le coloca al fondo el degradado lineal y los colores*/
+        height: 100vh; display: flex; justify-content: right; align-items: center; }/*alinea los objetos en el centro*/
+
+    }
+/*division de la pagina*/
+    .container {
+        display: grid;
+        grid-template-areas:"h      h       h       h"
+                            "nav   nav    nav    nav"
+                            "aside  section section aside2"
+                            "footer footer footer footer";
+        grid-gap: 10px;
+    }
+    header{
+      grid-area: h;
+      align-content: center;
+      color: yellow;
+      text-shadow: grey 2px 5px;
+    }
+    nav{
+      grid-area: nav;
+      border: 2px solid red;
+      background-color: lightgreen;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      width: 70%;
+      text-align: center;
+    }
+    section{
+      grid-area: section;
+    }
+    .imagen {
+      position: relative;
+      cursor: pointer;
+      left: 0;
+      transition: left 5s cubic-bezier(0, 0, 1, 2);
+      animation-name: fadeInOut, moveLeft300px, bounce;
+      animation-duration: 2.5s, 5s, 1s;
+      animation-iteration-count: 2, 1, 5;
+    }
+    aside{
+      grid-area: aside2;
+      border: 5px solid black;
+      background-color: lightgray;
+      width: 80%;
+      height: auto;
+    }
+    footer{
+      grid-area: footer;
+      font-family: fantasy;
+      border: 1px solid purple;
+      border-radius: 20px;
+    }
+    /*CELULARES*/
+  @media screen and (max-width: 640px) {
+      .container{
+          grid-template-areas: "h"
+                               "nav"
+                               "section"
+                               "aside"
+                               "footer";
+          grid-gap: 5px;
+          background-image: url("Fondo.jpg");
+       }
+
+      p{
+          color:green;
+          font-size: .8rem;
+      }
+      h1{
+          font-size: 1.4rem;
+       }
+
+      h2{
+          font-size: 1rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+  }
+
+    /*TABLETS*/
+  @media screen and (min-width: 640px) and (max-width: 1280px) {
+
+      .container{
+          grid-template-areas: "h h h"
+                               "nav nav nav"
+                               "aside section section"
+                               "footer footer footer";
+          grid-gap: 20px;
+
+          /*grid-auto-rows: 100px;*/
+          /*grid-auto-rows: minmax(100px, auto);*/
+       }
+      #flotar{
+          float:none;
+          padding: 5px;
+          display: block;
+          width: auto;
+      }
+      h1{
+          font-size: 1.6rem;
+       }
+
+      h2{
+          font-size: 1.2rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+
+  }
+
+    /*LAP TOP*/
+  @media screen and (min-width: 1280px) and (max-width: 2700px){
+    .container{
+        grid-template-areas: "h h h h"
+                             "nav nav nav nav"
+                             "aside section section section"
+                             "footer footer footer footer";
+        grid-gap: 25px;
+        background-image: url("Fondo.jpg");
+
+        /*grid-auto-rows: 100px;*/
+        /*grid-auto-rows: minmax(100px, auto);*/
+     }
+    #flotar{
+        float:none;
+        padding: 7px;
+        display: block;
+        width: auto;
+    }
+    h1{
+        font-size: 1.8rem;
+     }
+
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+      font-size: 1.4rem
+    }
+
+  }
+  /*TV*/
+@media screen and (min-width: 2700px) {
+  .container{
+      grid-template-areas: "h h h h h"
+                           "nav nav nav nav nav"
+                           "aside section section section section"
+                           "footer footer footer footer footer";
+      grid-gap: 30px;
+      background-image: url("Fondo.jpg");
+
+      /*grid-auto-rows: 100px;*/
+      /*grid-auto-rows: minmax(100px, auto);*/
+   }
+ }
+    </style>
+  </head>
+  <body class="container">
+    <header>
+        <h1>¡BIENVENIDO A LA PAGINA PRINCIPAL!</h1>
+    </header>
+    <nav>
+      <a href="uno.html">UNO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="dos.html">DOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="tres.html">TRES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="cuatro.html">CUATRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </nav>
+    <section>
+      <h2>Bordelands Saga</h2>
+    <section>
+      <h2>Un poco al respecto de cada uno de los juegos principales</h2>
+      <img class="imagen" src="Archivos/Border.jpg" onclick="this.style.left='350px'">
+    </section>
+  </section>
+    <aside class="indice">
+      <h3>INDICE</h3>
+        <a href="https://borderlands.fandom.com/es/wiki/Borderlands"
+           target="_blank">Bordelands</a><br>
+        <a href="https://borderlands.fandom.com/es/wiki/Borderlands:_The_Pre-Sequel!"
+           target="_blank">Bordelands Pre-Sequel</a> <br>
+        <a href="https://borderlands.fandom.com/es/wiki/Borderlands_2"
+           target="_blank">Bordelands 2</a> <br>
+        <a href="https://borderlands.fandom.com/es/wiki/Borderlands_3"
+           target="_blank">Bordelands 3</a> <br>
+    </aside>
+    <section>
+
+    </section>
+  </body>
+</html>

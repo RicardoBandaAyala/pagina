@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NUMERO UNO</title>
+    <style>
+    html {
+        font-size: 15px;
+    }
+    body {
+        max-width: 900px;
+        margin: 2em auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+/*division de la pagina*/
+    .container {
+        display: grid;
+        grid-template-areas:"h      h       h"
+                            "nav   nav    nav"
+                            "aside  section aside2"
+                            "footer footer  footer";
+        grid-gap: 10px;
+    }
+    header{
+      grid-area: h;
+      align-content: center;
+      color: yellow;
+      background: -webkit-linear-gradient( #F5E55C, #F9181B);/*selecciona el fondo del texto y los colores*/
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      font-size: 40px; font-weight: bold;
+    }
+    nav{
+      grid-area: nav;
+      border: 2px solid red;
+      width: 70%;
+      text-align: center;
+    }
+    section{
+      grid-area: section;
+    }
+    section > .Parte 3{
+      grid-area: section;
+      border: 5px solid black;
+      background-color: lightgray;
+    }
+    footer{
+      grid-area: footer;
+      font-family: fantasy;
+      border: 1px solid purple;
+      border-radius: 20px;
+    }
+    /*CELULARES*/
+  @media screen and (max-width: 640px) {
+      .container{
+          grid-template-areas: "h"
+                               "nav"
+                               "section"
+                               "aside"
+                               "footer";
+          grid-gap: 5px;
+
+       }
+
+      p{
+          color:green;
+          font-size: .8rem;
+      }
+      h1{
+          font-size: 1.4rem;
+       }
+
+      h2{
+          font-size: 1rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+  }
+
+    /*TABLETS*/
+  @media screen and (min-width: 640px) and (max-width: 1280px) {
+
+      .container{
+          grid-template-areas: "h h h"
+                               "nav nav nav"
+                               "aside section section"
+                               "footer footer footer";
+          grid-gap: 20px;
+
+          /*grid-auto-rows: 100px;*/
+          /*grid-auto-rows: minmax(100px, auto);*/
+       }
+      #flotar{
+          float:none;
+          padding: 5px;
+          display: block;
+          width: auto;
+      }
+      h1{
+          font-size: 1.6rem;
+       }
+
+      h2{
+          font-size: 1.2rem;
+      }
+      h3{
+        font-size: 1.4rem
+      }
+
+
+  }
+
+    /*LAP TOP*/
+  @media screen and (min-width: 1280px) and (max-width: 2700px){
+    .container{
+        grid-template-areas: "h h h h"
+                             "nav nav nav nav"
+                             "aside section section section"
+                             "footer footer footer footer";
+        grid-gap: 25px;
+
+        /*grid-auto-rows: 100px;*/
+        /*grid-auto-rows: minmax(100px, auto);*/
+     }
+    #flotar{
+        float:none;
+        padding: 7px;
+        display: block;
+        width: auto;
+    }
+    h1{
+        font-size: 1.8rem;
+     }
+
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+      font-size: 1.4rem
+    }
+
+  }
+  /*TV*/
+@media screen and (min-width: 2700px) {
+  .container{
+      grid-template-areas: "h h h h h"
+                           "nav nav nav nav nav"
+                           "aside section section section section"
+                           "footer footer footer footer footer";
+      grid-gap: 30px;
+
+      /*grid-auto-rows: 100px;*/
+      /*grid-auto-rows: minmax(100px, auto);*/
+   }
+ }
+    </style>
+  </head>
+  <body class="container">
+    <header>
+      <h1>NUMERO 1: Bordelands</h1>
+    </header>
+    <nav>
+      <a href="home.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="dos.html">DOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="tres.html">TRES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="cuatro.html">CUATRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </nav>
+    <section>
+      <nav id="indice">
+      <h3 id="indice">INDICE</h3>
+      <a href="#Parte1">Introduccion</a> <br>
+      <a href="#Parte2">Historia</a> <br>
+      <a href="#Parte3">Foto del juego</a> <br>
+      </nav>
+      <section>
+        <section id="Parte1">
+        <h2><a href="#indice">Introduccion</a></h2>
+        <p>
+          Borderlands es un juego de disparos en primera persona de ciencia
+          ficción con elementos de RPG creado por Gearbox Software para
+          Microsoft Windows, PlayStation 3, Xbox 360 y Mac OS X. El juego fue
+          revelado en la edición de septiembre de 2007 de la revista Game
+          Informer como el primero de una serie planeada. Fue lanzado el 20 de
+          octubre de 2009.
+        </p>
+        </section>
+        <section id="Parte2">
+        <h2><a href="#indice">Historia</a></h2>
+        <p>
+          En un futuro distante, varias naves de colonización se dirigieron
+          hacia un planeta en los confines de la galaxia: Pandora. Los colonos
+          fueron atraídos hacia allí en busca de una vida mejor debido los
+          vastos recursos minerales que se rumoreaba que abundaban en el planeta.
+          Al cabo de un tiempo después de instalarse, los colonos descubrieron
+          que el planeta ofrecía poco más que ruinas alienígenas y desolación.
+          Una década después, las compañías mineras se retiraron del planeta
+          con las manos vacías, abandonando tanto a los criminales que habían
+          sido empleados como mano de obra forzada, como algunos colonos que
+          fueron dejados a su suerte en el lugar. La vida en Pandora llevó a
+          sus nuevos habitantes a formar comunidades: mientas que algunos
+          colonos establecieron pequeños pueblos, los criminales organizaron
+          bandas salvajes que rápidamente se extendieron por la región. Sin
+          embargo, algunos colonos no se dieron por vencidos y optaron por
+          explorar las ruinas alienígenas en busca de las supuestas riquezas
+          que albergaba el lugar. Después de siete años terrestres, la lenta
+          órbita del planeta provocó una transición de invierno a primavera, y
+          muchas criaturas peligrosas y horripilantes comenzaron a emerger de
+          la hibernación, haciendo que Pandora fuese aún más peligrosa.
+
+          A pesar de los desafíos, una nueva esperanza surgió con el
+          descubrimiento de un tallado en el costado de una montaña donde se
+          graficaba una enigmática cámara alienígena. Los rumores hablaban de
+          que dicha Cámara contenía vastas reservas de tecnología alienígenas y
+          secretos universales, sin embargo, aquellos que lograron llegar a la
+          Cámara fueron exterminados por alguna especie de fuerza protectora,
+          y la única evidencia de dicho descubrimiento era un registro de radio
+          dañado que proclamaba la majestuosidad de la Cámara, pero que no
+          revelaba su localización.
+        </p>
+        </section>
+        <section class="Parte3">
+          <h2><a href="#indice">Foto del juego</a></h2>
+          <p>
+            <img src="Archivos/BL1.jpg"  width="400" height="300">
+          </p>
+          </section>
+      </section>
+
+    </section>
+    <footer>
+      <a href="home.html">REGRESAR</a>
+    </footer>
+  </body>
+</html>
