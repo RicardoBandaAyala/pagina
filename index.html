@@ -31,6 +31,17 @@
       color: yellow;
       text-shadow: grey 2px 5px;
     }
+    .text{
+      animation: rotacion 2s infinite;
+    }
+    @keyframes rotacion {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+    }
     nav{
       grid-area: nav;
       border: 2px solid red;
@@ -176,7 +187,7 @@
   </head>
   <body class="container">
     <header>
-        <h1>¡BIENVENIDO A LA PAGINA PRINCIPAL!</h1>
+        <h1 class="text">¡BIENVENIDO A LA PAGINA PRINCIPAL!</h1>
     </header>
     <nav>
       <a href="UNO.html">UNO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
